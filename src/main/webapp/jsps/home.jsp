@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">KK FUNDA IS TEACHING EXCELLENT</h1>
+<h1 align="center">KK FUNDA IS TEACHING AMAZING</h1>
 <h1 align="center"> KK FUNDA</h1>
 <hr>
 <br>

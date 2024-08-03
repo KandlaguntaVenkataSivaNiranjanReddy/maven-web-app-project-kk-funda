@@ -17,16 +17,43 @@
 	</organization>
 
 	<properties>
-		<jdk.version>1.8</jdk.version>
-		<spring.version>5.1.2.RELEASE</spring.version>
-		<junit.version>4.11</junit.version>
-		<log4j.version>1.2.17</log4j.version> 
-		<sonar.host.url>http://51.20.249.18:9000/</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-		<sonar.password>niranjan</sonar.password>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
+        <jdk.version>1.8</jdk.version>
+        <spring.version>5.1.2.RELEASE</spring.version>
+        <junit.version>4.11</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>sonar1</id>
+            <properties>
+                <sonar.host.url>http://13.53.58.238:9000/</sonar.host.url>
+                <sonar.login>admin</sonar.login>
+                <sonar.password>niranjan</sonar.password>
+            </properties>
+        </profile>
+        <profile>
+            <id>sonar2</id>
+            <properties>
+                <sonar.host.url>http://13.60.86.135:9000/</sonar.host.url>
+                <sonar.login>admin</sonar.login>
+                <sonar.password>niranjan</sonar.password>
+            </properties>
+        </profile>
+    </profiles>
+</project>
 	<dependencies>
 		<dependency>
 			<groupId>org.json</groupId>

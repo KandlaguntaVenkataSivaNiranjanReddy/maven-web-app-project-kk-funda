@@ -26,16 +26,8 @@
 		<sonar.password>niranjan</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <propertiesnew>
-               <!-- New SonarQube configuration -->
-               <sonar.host.url>http://13.49.18.31:9000/</sonar.host.url>
-               <sonar.login>admin</sonar.login.new>
-               <sonar.password>niranjan</sonar.password>
-        </propertiesnew>
 	</properties>
 	<dependencies>
-		
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>

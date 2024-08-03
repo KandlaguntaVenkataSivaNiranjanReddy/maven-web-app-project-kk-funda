@@ -28,12 +28,12 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
-        <properties>
+        <propertiesnew>
                <!-- New SonarQube configuration -->
                <sonar.host.url>http://13.49.18.31:9000/</sonar.host.url>
                <sonar.login>admin</sonar.login.new>
                <sonar.password>niranjan</sonar.password>
-        </properties>
+        </propertiesnew>
 	<dependencies>
 		
 		<dependency>

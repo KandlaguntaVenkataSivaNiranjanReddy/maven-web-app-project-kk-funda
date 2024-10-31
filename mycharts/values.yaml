@@ -1,0 +1,33 @@
+replicaCount: 2
+
+image:
+  repository: kkeducation123456/maven-web-app
+  tag: 1.2
+  pullPolicy: IfNotPresent
+
+service:
+  enabled: true
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
+
+ingress:
+  enabled: false
+  name: ""
+  annotations: {}
+  path: /
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+
+hpa:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 5
+  cpu: 80
+
+serviceAccount:
+  create: true
+  name: ""
+namespace: ns1

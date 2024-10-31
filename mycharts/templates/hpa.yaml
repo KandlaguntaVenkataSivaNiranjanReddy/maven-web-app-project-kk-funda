@@ -1,0 +1,19 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ .Release.Name }}-mavenwebapp-hpa
+  namespace: {{ .Values.namespace | default "ns1" }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1  # This may need to be adjusted based on your resource type
+    kind: Deployment      # This should match the kind of the resource you're scaling
+    name: {{ .Release.Name }}-mavenwebappdep  # The name of your deployment
+  minReplicas: {{ .Values.hpa.minReplicas }}
+  maxReplicas: {{ .Values.hpa.maxReplicas }}
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ .Values.hpa.cpu }}
